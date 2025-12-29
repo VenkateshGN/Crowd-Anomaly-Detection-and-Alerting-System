@@ -1,0 +1,145 @@
+/* General */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Camera Grid */
+.camera-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.camera-box {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.camera-box.danger {
+  border: 2px solid red;
+}
+
+.camera-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.status-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status-dot.green {
+  background-color: green;
+}
+
+.status-dot.red {
+  background-color: red;
+}
+
+.camera-feed {
+  height: 120px;
+  background-color: #e9ecef;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.anomaly-text {
+  color: red;
+}
+
+.camera-footer {
+  margin-bottom: 10px;
+}
+
+.camera-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.camera-actions button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.camera-actions button:hover {
+  background-color: #0056b3;
+}
+
+/* Panels */
+.status-panel, .chart-panel, .action-panel, .map-panel {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.chart-box {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 10px;
+}
+.progress-container {
+  width: 100%;
+  background: #222;
+  border-radius: 6px;
+  margin: 8px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #00ff88;
+  transition: width 0.2s ease;
+}
+
+.progress-container span {
+  font-size: 12px;
+  color: #aaa;
+  margin-left: 6px;
+}
